@@ -1,1 +1,16 @@
 @import "custom-variables";
+
+.admin-quick-links{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    flex-wrap: wrap;
+    
+    div{
+        border: 1px solid #222;
+        padding: 10px;
+        margin: 5px;
+        width: 300px;
+        height: 100px;
+    }
+}

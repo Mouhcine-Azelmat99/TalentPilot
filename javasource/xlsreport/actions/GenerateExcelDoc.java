@@ -25,7 +25,6 @@ import xlsreport.report.export.Export;
 import xlsreport.report.export.ExportCSV;
 import xlsreport.report.export.ExportExcel;
 import com.mendix.systemwideinterfaces.core.IContext;
-import com.mendix.webui.CustomJavaAction;
 import com.mendix.systemwideinterfaces.core.UserAction;
 
 public class GenerateExcelDoc extends UserAction<IMendixObject>

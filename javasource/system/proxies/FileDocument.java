@@ -72,8 +72,20 @@ public class FileDocument implements com.mendix.systemwideinterfaces.core.IEntit
 	 */
 	public static system.proxies.FileDocument initialize(com.mendix.systemwideinterfaces.core.IContext context, com.mendix.systemwideinterfaces.core.IMendixObject mendixObject)
 	{
+		if (mendixObject.isInstanceOf("AgentCommons.AgentImportExportFile")) {
+			return agentcommons.proxies.AgentImportExportFile.initialize(context, mendixObject);
+		}
+		if (mendixObject.isInstanceOf("XLSReport.CustomExcel")) {
+			return xlsreport.proxies.CustomExcel.initialize(context, mendixObject);
+		}
+		if (mendixObject.isInstanceOf("TalentPilot.Document")) {
+			return talentpilot.proxies.Document.initialize(context, mendixObject);
+		}
 		if (mendixObject.isInstanceOf("System.Image")) {
 			return system.proxies.Image.initialize(context, mendixObject);
+		}
+		if (mendixObject.isInstanceOf("Encryption.PGPCertificate")) {
+			return encryption.proxies.PGPCertificate.initialize(context, mendixObject);
 		}
 		if (mendixObject.isInstanceOf("System.SynchronizationErrorFile")) {
 			return system.proxies.SynchronizationErrorFile.initialize(context, mendixObject);
